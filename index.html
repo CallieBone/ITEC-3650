@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  
+  <meta charset="utf-8">
+
+  <title> IT Pearl | ITEC 3650 | Callie Bone</title>
+  <meta name="description" content="A connection from IT Pearl">
+  <meta name="author" content="Callie Bone">
+<link href="assets/css/style.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chokokutai&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <h1>Callie Bone</h1>
+  <nav> 
+    <ul> 
+      <li><a href="prototype/index.html">Prototype HTML Assignment</a></li>
+      <li><a href="css-demo/index.html">Css-Demo</a></li>
+      <li><a href="cheatsheet/index.html">CheatSheet</a></li>
+    </ul>
+  </nav>
+
+   <!-- Audio player -->
+   <audio controls autoplay>
+    <source src="assets/audio/bruno.mp3" type="audio/mpeg">
+  </audio>
+
+ <!-- Slideshow container -->
+ <div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="assets/img/food1.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="assets/img/food2.jpeg" style="width:100%">
+    </div>
+  <div class="mySlides fade">
+    <img src="assets/img/food3.jpeg" style="width:100%">
+  </div>
+</div>
+
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+</script>
+
+  
+</body>
+</html>

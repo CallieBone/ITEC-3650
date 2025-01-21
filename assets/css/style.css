@@ -1,0 +1,74 @@
+body {
+    background-color: #ff9cd8;
+    font-family: 'Chokokutai', sans-serif; 
+font-color: #00eeff;
+
+}
+
+input, textarea {
+  caret-color: #1100ff;
+}
+
+h1 {
+    color: #a50ba5;
+}
+
+a {
+    color: #ff006f; 
+}
+
+a:visited {
+    color: #581130;
+}
+
+a:hover {
+  color: #6e013d; /* Replace with your desired color */
+}
+
+#audio-control {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  background-color: #8a0b46;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#audio-control:hover {
+  background-color: #6e013d;
+}
+
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+    border: 2px solid #8a0b46; 
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img {
+    width: 200%;
+    border-radius: 100px;
+    display: block;
+  }
+
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  
