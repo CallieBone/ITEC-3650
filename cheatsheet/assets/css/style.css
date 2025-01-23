@@ -15,6 +15,12 @@ html {
     background:#ff94cf;
     padding:20px;
   }
+
+  strong{
+    color:#ff0062;
+    font-family: "Rock Salt", sans-serif;
+
+  }
   
   label, input {
     display:block;

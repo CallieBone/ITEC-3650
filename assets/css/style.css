@@ -22,8 +22,28 @@ a:visited {
 }
 
 a:hover {
-  color: #6e013d; /* Replace with your desired color */
+  color: #6e013d;
 }
+
+.jumping-text {
+  display: inline-block;
+  animation: jump 0.9s infinite alternate;
+  color:#ffffff;
+  text-shadow: 2px 2px 4px #6e013d;
+  font-family: 'Agu Display', sans-serif;
+  font-size: larger;
+  margin-left:40%;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
 
 #audio-control {
   position: absolute;
