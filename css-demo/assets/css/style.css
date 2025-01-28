@@ -1,0 +1,203 @@
+/* Color Scheme(Shades): 
+#D31557
+#B11249
+#DB165C
+#8F0E3B
+#6D0B2D
+#4B071F
+*/
+
+
+
+/* 
+"." is for class selectors
+"#" is for section ID[Elements]
+*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  img{
+    max-width: 100%;
+  }
+
+  /* -------- Utility Classes --------*/
+  
+.container {
+  padding: 40px;
+}
+  
+  body{
+    background-color:#fd4ca5;
+    font-family: "Rubik Wet Paint", system-ui;
+    a:visited { color: #ffd3f5; }  
+    a:hover { color: #b112a9; }
+  }
+  
+  main{
+    background-color:#ffffff;
+    width:60vw;
+    /* long form */
+    margin-top:40px;
+    margin-right:auto;
+    margin-bottom:40px;
+    margin-left:auto;
+ /* Top / Right / Bottom / Left */
+  margin: 40px auto 40px auto;
+/* TOP/Bottom | LEFT/RIGHT */
+    margin: 40px auto;
+    border: 2px solid #f7beff;
+  }
+
+  
+  
+  header.primary {
+    background-color:#ff93c9;
+    padding:20px;
+    background-image: url(../img/fanart.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    display: flex;
+    border-bottom:3px solid #ff639f;
+  }
+
+  header.primary h1 a { 
+    color: #ff0062; 
+    text-decoration: none;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px  #b112a9;
+  }
+
+  header.primary h2 {
+    text-shadow: 2px 2px #ff93c9;
+    color:rgb(128, 52, 96)
+  }
+
+
+
+  header.primary nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+  }
+
+  header.primary nav ul li {
+    margin-bottom: 10px;
+  }
+
+  header.primary nav ul li a{
+    border: 1px solid #fd4ca5;
+    border-right: 10px solid #c738d4;
+    border-radius: 20px 0;
+    color:#ff0062;
+    display: block;
+    background-color:rgb(252, 92, 217, .7);
+    padding: 10px 10px 10px 0;
+    text-align: right;
+    transition: .10s;
+    text-decoration: none;
+  }
+
+  header.primary nav a:hover {
+    background-color:rgb(255, 101, 178);
+    text-decoration: underline;
+  }
+
+  header.primary div.hgroup{
+    width:70%;
+
+  }
+
+  header.primary nav{
+    width:30%;
+  }
+
+  #content{
+    line-height: 1.8rem;
+  }
+
+  #content h2{
+color:#ff52cbb7;
+border-left: 7.5px solid #ca004e;
+padding-left: 7.5px;
+border-radius:15px 0;
+  }
+
+  #content h3, article.widget h2{
+    color:#ff52cbb7;
+    border-left: 7.5px solid #6d1839;
+    padding-left: 7.5px;
+    border-radius:15px 0;
+      }
+
+  #blog.container{
+    background-color: #6d1839;
+    padding: 20px 0;
+    border-top:6px double #ff93c9; 
+  border-bottom:6px double #ff93c9; 
+  }
+
+  #blog > h2{
+    color:#ff93c9;
+    text-shadow: 2px 2px  #000;
+    font-size:2.2rem;
+    margin: 20px;
+  }
+
+  #blog article.post {
+    background-color: #ff0062;
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:auto;
+    grid-template-areas:
+    "figure header"
+    "figure post-content"
+    "figure post-meta"
+  }
+
+  #blog article figure{
+    grid-area:figure;
+  margin:0 20px 0 0;
+  }
+
+  #blog article header{
+    grid-area:header;
+  }
+
+  #blog article.post-content{
+    grid-area:post-content;
+  }
+
+  #blog article.post-meta{
+    grid-area:post-meta;
+  }
+
+aside .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:auto;
+  gap: 40px ;
+}
+
+#colophon{
+  text-align: center;
+  background-image: url(../img/pinkie-pie.jpg);
+  background-repeat:no-repeat;
+  background-size:auto
+  color:#fff;
+  padding: 20px;
+}
+
+
+
+/*  header.primary h1, header.primary h2{
+    margin: 0;
+  }
+    */
