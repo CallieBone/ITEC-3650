@@ -1,0 +1,144 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#colophon{
+ justify-content: space-around;
+  display: flex;
+  padding: 10px;
+  color: #ff006a;
+  text-align: center;
+  background-color: #ffb4f3;
+}
+
+.navbar{
+color: aqua;
+
+}
+
+img{ 
+    max-width: 100%;
+    height:auto;
+  }
+  
+body{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 50px;
+  display: flex;
+  background-color: rgb(255, 218, 230);
+}
+
+.height-el {
+  width: 50%;
+}
+
+table {
+  border: 1px solid #3f1626;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px, 0;
+}
+
+caption {
+  font-weight: bold;
+  margin: 10px;
+}
+
+tr:hover {
+  background-color: rgba(255, 0, 128, 0.2);
+}
+
+th {
+  background-color: #b60e40;
+  padding: 10px;
+}
+
+td {
+  border: 1px solid #66043d;
+  padding: 5px;
+
+}
+  
+  @media screen and (min-width:992px) {
+    
+  }
+  
+  
+  /*----------------------Edge Case Tweaks-----------------------*/
+  
+  
+  @media screen and (max-width: 600px) {
+
+    header.primary nav ul {
+      flex-direction: column;
+      max-width: 250px;
+      margin: auto;
+      gap: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 460px) {
+    .related-links li a svg{display:none;}
+    
+  }
+  
+  @media only screen and (max-width: 395px) {
+  .related-links{
+  flex-direction:column;
+  
+  }
+
+}
+
+.related-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+}
+
+.related-links a {
+  font-size: 2.0 rem;
+  margin: 20px 0 0;
+}
+
+.related-links a {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.related-links a {
+  color: #ffb5da;
+  text-decoration: none;
+  background-color: #ff0000;
+  background-color: rgba(110, 0, 52, 0.6);
+  padding: 5px 3px;
+  border: 2px solid #6d1d4c;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.related-links a:hover {
+  background: rgba(80, 11, 40, 0.95);
+}
+
+.related-links a{
+  display:block;
+  }
+
+  #shopping svg {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+  }
+
+  #shopping {
+    margin-left: 20px; /* Adjust the value as needed */
+  }
