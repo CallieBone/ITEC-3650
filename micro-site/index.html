@@ -3,14 +3,14 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N7V2GC5GL2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7V2GC5GL2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-N7V2GC5GL2');
-</script>
+    gtag('config', 'G-N7V2GC5GL2');
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Micro project</title>
@@ -20,274 +20,332 @@
 </head>
 
 <body>
-  <header class="row-primary">
-    <div class="col">
-      <div class="text-center my-3">
-        <a class="navbar-brand" href="web-title">BodyBeauty</a>
+  <div class="top-banner">
+    <p>Welcome to my website! Enjoy our special offers.</p>
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button data-mdb-button-init class="navbar-toggler px-0" type="button" data-mdb-collapse-init
+      data-mdb-target="#navbarExampleOnHover" aria-controls="navbarExampleOnHover" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarExampleOnHover">
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto ps-lg-0" style="padding-left: 0.15rem">
+        <!-- Navbar dropdown -->
+        <li id="megamenu" class="nav-item dropdown dropdown-hover position-static">
+          <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-mdb-toggle="dropdown" aria-expanded="false">
+Top Offers          </a>
+
+        <li id="candlecare" class="nav-item dropdown dropdown-hover position-static">
+          <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-mdb-toggle="dropdown" aria-expanded="false">
+Candles          </a>
+          
+          <!-- Dropdown menu -->
+          <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                          ">
+
+            <div class="container">
+              <div class="row my-4">
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a href="" class="list-group-item list-group-item-action">Lorem ipsum</a>
+                    <a href="" class="list-group-item list-group-item-action">Dolor sit</a>
+                    <a href="" class="list-group-item list-group-item-action">Amet consectetur</a>
+                    <a href="" class="list-group-item list-group-item-action">Cras justo odio</a>
+                    <a href="" class="list-group-item list-group-item-action">Adipisicing elit</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a href="" class="list-group-item list-group-item-action">Explicabo voluptas</a>
+                    <a href="" class="list-group-item list-group-item-action">Perspiciatis quo</a>
+                    <a href="" class="list-group-item list-group-item-action">Cras justo odio</a>
+                    <a href="" class="list-group-item list-group-item-action">Laudantium maiores</a>
+                    <a href="" class="list-group-item list-group-item-action">Provident dolor</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                  <div class="list-group list-group-flush">
+                    <a href="" class="list-group-item list-group-item-action">Iste quaerato</a>
+                    <a href="" class="list-group-item list-group-item-action">Cras justo odio</a>
+                    <a href="" class="list-group-item list-group-item-action">Est iure</a>
+                    <a href="" class="list-group-item list-group-item-action">Praesentium</a>
+                    <a href="" class="list-group-item list-group-item-action">Laboriosam</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="list-group list-group-flush">
+                    <a href="" class="list-group-item list-group-item-action">Cras justo odio</a>
+                    <a href="" class="list-group-item list-group-item-action">Saepe</a>
+                    <a href="" class="list-group-item list-group-item-action">Vel alias</a>
+                    <a href="" class="list-group-item list-group-item-action">Sunt doloribus</a>
+                    <a href="" class="list-group-item list-group-item-action">Cum dolores</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li id="bodycare" class="nav-item dropdown dropdown-hover position-static">
+          <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-mdb-toggle="dropdown" aria-expanded="false">
+Body Care          </a>
+          
+          <!-- Dropdown menu -->
+          <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                          ">
+
+            <div class="container">
+              <div class="row my-4">
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a href="" class="list-group-item list-group-item-action">Lorem ipsum</a>
+                    <a href="" class="list-group-item list-group-item-action">Dolor sit</a>
+                    <a href="" class="list-group-item list-group-item-action">Amet consectetur</a>
+                    <a href="" class="list-group-item list-group-item-action">Cras justo odio</a>
+                    <a href="" class="list-group-item list-group-item-action">Adipisicing elit</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                  <div class="list-group list-group-flush">
+                    <a href="" class="list-group-item list-group-item-action">Explicabo voluptas</a>
+                    <a href="" class="list-group-item list-group-item-action">Perspiciatis quo</a>
+                    <a href="" class="list-group-item list-group-item-action">Cras justo odio</a>
+                    <a href="" class="list-group-item list-group-item-action">Laudantium maiores</a>
+                    <a href="" class="list-group-item list-group-item-action">Provident dolor</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                  <div class="list-group list-group-flush">
+                    <a href="" class="list-group-item list-group-item-action">Iste quaerato</a>
+                    <a href="" class="list-group-item list-group-item-action">Cras justo odio</a>
+                    <a href="" class="list-group-item list-group-item-action">Est iure</a>
+                    <a href="" class="list-group-item list-group-item-action">Praesentium</a>
+                    <a href="" class="list-group-item list-group-item-action">Laboriosam</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="list-group list-group-flush">
+                    <a href="" class="list-group-item list-group-item-action">Cras justo odio</a>
+                    <a href="" class="list-group-item list-group-item-action">Saepe</a>
+                    <a href="" class="list-group-item list-group-item-action">Vel alias</a>
+                    <a href="" class="list-group-item list-group-item-action">Sunt doloribus</a>
+                    <a href="" class="list-group-item list-group-item-action">Cum dolores</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  
+
+  <div class="d-flex align-items-center">
+    <section id="search" class="me-3">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Find Your Dr..." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
       </div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Home
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../bmi-finale-16.5-health/index.html">Health</a></li>
-                <hr class="dropdown-divider">
-                <li><a class="dropdown-item" href="../bmi-finale-16.5/index.html">Pills</a></li>
-              </ul>
-            </li>
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              BMI of 25.0-29.9
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../bmi-finale-25.0-health/index.html">Health</a></li>
-              <hr class="dropdown-divider">
-              <li><a class="dropdown-item" href="../bmi-finale-25.0/index.html">Pills</a></li>
-            </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                BMI of 30.0-34.9
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../bmi-finale-30.0-health/index.html">Health</a></li>
-                <hr class="dropdown-divider">
-                <li><a class="dropdown-item" href="../bmi-finale-30.0/index.html">Pills</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                BMI of 35.0-39.9+
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../bmi-finale-35.0-health/index.html">Health</a></li>
-                <hr class="dropdown-divider">
-                <li><a class="dropdown-item" href="../bmi-finale-35.0/index.html">Pills</a></li>
-              </ul>
-            </li> 
-
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search by Fragrance or..." aria-label="Search">
-              <a href="https://www.Google.com/" button class="btn btn-outline-success" type="submit">Search</a></button>
-            </form>
-            
-            <section id="shopping">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"/></svg>
-            </section>
+      </form>
+    </section>
+  
+    <section id="shopping">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#fe86de" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"/></svg>
+      </a>
+    </section>
+  
+  </nav>
+  
+  <!-- Carousel -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/img/cupcake1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Featured Product 1</h5>
+          <p>Short description of the featured product.</p>
         </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/cupcake2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Featured Product 2</h5>
+          <p>Short description of the featured product.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/pineapple.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Featured Product 3</h5>
+          <p>Short description of the featured product.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/strawberry.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Featured Product 4</h5>
+          <p>Short description of the featured product.</p>
+        </div>
+      </div>
     </div>
     
-    </nav>
-
-    <!-- opening Photos -->
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./assets/img/cupcake2.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Featured Product 1</h5>
-            <p>Short description of the featured product.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/img/cupcake.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Featured Product 2</h5>
-            <p>Short description of the featured product.</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
     
     <br>
 
     <!-- Product Categories -->
-    <div class="container-fluid my-5">
-      <h2>Shop by Category</h2>
+    <div class="container-fluid my-5">      
+      <div class="d-flex justify-content-center align-items-center flex-column">
+      <h2>Shop by Fragrance Category</h2>
       <div class="row">
         <div class="col-md-3">
           <div class="card">
-            <img src="./assets/img/earth.jpg" class="card-img-top" alt="...">
+            <a href="#">
+            <img src="./assets/img/earth.jpg" class="card-img-top" alt="earth-perfume" >
             <div class="card-body">
+              </a>
               <h5 class="card-title">Earthy</h5>
-              <a href="#" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card">
-            <img src="./assets/img/flower.jpg" class="card-img-top" alt="...">
+            <a href="#">
+            <img src="./assets/img/flower.jpg" class="card-img-top" alt="flower-perfume" href="#">
             <div class="card-body">
+              </a>
               <h5 class="card-title">Flowery</h5>
-              <a href="#" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card">
-            <img src="./assets/img/food.jpg" class="card-img-top" alt="...">
+            <a href="../gourmony/index.html">
+            <img src="./assets/img/food.jpg" class="card-img-top" alt="food-perfume">
             <div class="card-body">
+            </a>
               <h5 class="card-title">Gourmony</h5>
-              <a href="#" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card">
-            <img src="./assets/img/ocean.jpg" class="card-img-top" alt="...">
+            <a href="#">
+            <img src="./assets/img/ocean.jpg" class="card-img-top" alt="ocean-perfume" href="#">
             <div class="card-body">
+              </a>
               <h5 class="card-title">Oceany</h5>
-              <a href="#" class="btn btn-primary">Shop Now</a>
             </div>
           </div>
         </div>
-        <!-- Add more categories as needed -->
       </div>
     </div>
+  
+
+    <br>
+
+
+        <!-- Home Catergories -->
+        <div class="container-fluid my-5">      
+          <div class="d-flex justify-content-center align-items-center flex-column">
+          <h2>Shop by Home Care</h2>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <a href="#">
+                <img src="./assets/img/detergent.png" class="card-img-top" alt="earth-perfume" href="#">
+                <div class="card-body">
+                  </a>
+                  <h5 class="card-title">Detergent</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <a href="#">
+                <img src="./assets/img/aroma-diffusers.png" class="card-img-top" alt="flower-perfume" href="#">
+                <div class="card-body">
+                  </a>
+                  <h5 class="card-title">Aroma Diffusers</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <a href="#">
+                <img src="./assets/img/scent-boosters.jpg" class="card-img-top" alt="food-perfume" href="#">
+                <div class="card-body">
+                </a>
+                  <h5 class="card-title">Scent Boosters</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <a href="#">
+                <img src="./assets/img/fabric-softener.png" class="card-img-top" alt="ocean-perfume" href="#">
+                <div class="card-body">
+                  </a>
+                  <h5 class="card-title">Fabric Softner</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
     <!-- Featured Products -->
     <div class="container my-5">
-      <h2>Featured Products</h2>
+      <div class="d-flex justify-content-center align-items-center flex-column">
+      <h2>Essential Oils</h2>
       <div class="row">
         <div class="col-md-3">
           <div class="card">
-            <img src="path/to/your/product1.jpg" class="card-img-top" alt="...">
+            <img src="./assets/img/essential-10.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Product 1</h5>
-              <p class="card-text">$19.99</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <h5 class="card-title">10-pack</h5>
+              <p class="card-text">$10.99</p>
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card">
-            <img src="path/to/your/product2.jpg" class="card-img-top" alt="...">
+            <img src="./assets/img/essential-20.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Product 2</h5>
-              <p class="card-text">$29.99</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <h5 class="card-title">20-pack</h5>
+              <p class="card-text">$20.99</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <section id="main content">
-
-    <h1>Teen prgenancy</h1>
-    <p> Teenage pregnancy is pregnancy in a woman 19 years of age or younger. A woman can get pregnant if she has vaginal sex with a man at any age after she’s begun having regular monthly periods.
-
-      According to the Centers for Disease Control and Prevention (CDC)Trusted Source, in 2017, around 194,000 babies were born to American girls between the ages of 15 to 19.
-      
-      While the number of teenage pregnancies in the United States has been in decline, it still remains higher than in other industrialized countries. </p>
-    <h3> How Common is Teen Pregnancy?</h3>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi necessitatibus inventore provident illum
-      incidunt unde repellendus, nisi cum placeat pariatur molestias et laborum nihil, dolore vitae suscipit asperiores
-      eligendi. Cumque deserunt magnam labore, est quibusdam, autem inventore impedit quod sunt beatae repudiandae.
-      Beatae asperiores in tenetur ducimus delectus aliquid. </p>
-
-    <h3> How Does Teen Pregnancy Affect Teen Parents? </h3>
-    <p> Teenage pregnancy can have significant effects on adolescents, impacting their physical health, mental well-being, education, and social circumstances. Let’s explore some of these effects:
-
-      Physical Health:
-      Higher Risks: Adolescent mothers (aged 10-19 years) face higher risks of complications during pregnancy and childbirth compared to women aged 20–24 years. These risks include eclampsia, puerperal endometritis, and systemic infections.
-      Babies' Health: Babies born to teenage mothers also face higher risks, such as low birth weight, preterm birth, and severe neonatal conditions.
-      <br>
-      Mental Health:
-      Postpartum Depression: Teenage mothers are at a higher risk of experiencing postpartum depression. Research shows that girls aged 15–19 experience postpartum depression at a rate twice as high as women aged 25 and older.
-      Stress and Mental Health Concerns: Teen moms often face significant stress due to sleepless nights, arranging child care, and attempting to finish high school. They may also experience higher rates of depression, suicidal ideation, and posttraumatic stress disorder (PTSD).
-      <br>
-      Education and Social Impact-
-      <br>
-      High School Dropout: Teen mothers are more likely to drop out of high school due to the added responsibilities of parenting.
-      Economic Challenges: Without a high school diploma, teens and adults have greater difficulty securing quality employment and have lower earning potential.
-      Increased Vulnerability: Adolescent girls, especially those in early adolescence, are particularly vulnerable to health consequences related to pregnancy and delivery. Child marriage and child sexual abuse also increase the risk of teenage pregnancy.
-      <br>
-      Global Perspective:
-      <br>
-      Prevalence: Globally, an estimated 21 million girls aged 15–19 years in developing regions become pregnant each year, resulting in approximately 12 million births.
-      Rates of Change: While the adolescent birth rate (ABR) has decreased globally, rates of change vary across regions. Southern Asia has seen the sharpest decline, while Latin America, the Caribbean, and sub-Saharan Africa continue to have high rates of teenage pregnancy1.
-      Equity and Access: Reducing adolescent first births among vulnerable groups remains a challenge, leading to increasing inequity. Barriers to contraceptive access contribute to unintended pregnancies</p>
-
-      <h3> What Are The Health Consequences of Teen Pregnancy? </h3>
-      <p> A healthy pregnancy lasts 40 weeks. A baby that's delivered before 37 weeks of pregnancy is
-
-        premature. Teen mothers are more likely to give birth to premature babies.
-        
-        Sometimes, these babies lack complete development in their bodies and brains. Depending on how premature the baby is, this can lead to lifelong difficulties with health and development.
-        
-        Premature babies also tend to be underweight. Underweight babies might have trouble breathing and feeding as infants. As adults, underweight babies are more susceptible to diseases such as diabetes and heart disease.
-        
-        Low birth weight also affects brain development. Children who were born underweight have been observed to have learning difficulties.
-        
-        In addition to having an increased risk of being underweight, infants born to teenage mothers are also at a higher risk of infant mortality.</p>
-
-        <h4> The Pills: </h4>
-        <p> Below are the pills that anyone with a high or low BMI can use. As Emergency contraceptives! </p>
-
-    <h3> 1. My Choice</h3>
-    <div class="col-md-5">
-      <img src="./assets/img/my-choice.jpeg" alt="pill">
-    </div>
-    <figcaption class="figure-caption">The "My Choice" pill is an emergency oral contraceptive pill containing Levonorgestrel 1.5mg.</figcaption>
-    </p> The My Choice pill is NOT to be used on a regular basis. This medication is used as an emergency contraceptive or backup in case birth control fails or is used incorrectly. Any women or girl of reproductive age may need emergency contraception to avoid unwanted pregnancy. </p>
-
-    <h3> 2. My Way</h3>
-    <div class="col-md-5">
-      <img src="./assets/img/my-way.png" alt="pill">
-    </div>
-    <figcaption class="figure-caption">The "My Way" pill is to be taken 3 days after unprotected sex</figcaption>
-    </p> My Way is a morning-after pill used for emergency contraception. My Way consists of just one single pill that contains 1.5 mg of the progestin levonorgestrel. My Way emergency contraceptive is FDA-approved to help prevent pregnancy after unprotected sex or suspected contraception failure.
-
-    My Way is the one-pill generic version of the emergency contraceptive Plan B One-Step. It also contains the same progestin dose as the morning-after pills: Take Action, Next Choice One Dose, and AfterPill </p>
-
-    <h3> 3. Plan B </h3>
-    <div class="col-md-5">
-      <img src="./assets/img/plan-b.png" alt="pill">
-    </div>
-    <figcaption class="figure-caption">The "Plan B" pill will be less effective if you weigh more than 165 pounds, but still effective nonetheless.</figcaption>
-    </p> Plan B One-Step is an emergency contraceptive pill taken by mouth after unprotected sex. It's used to prevent pregnancy and is commonly referred to as the morning-after pill. Here are some key points about Plan B:
-<br>
-    Depending on where you are in your menstrual cycle, levonorgestrel, the active ingredient in Plan B, helps prevent pregnancy after unprotected intercourse.
-    It may prevent or delay ovulation, stop the release of an egg from your ovary, and prevent sperm from fertilizing the egg.
-    If fertilization has already occurred, it may prevent the fertilized egg from attaching to the womb.
-    If the fertilized egg is already implanted, Plan B won't be effective.
-    <br>
-    Effectiveness:
-    If taken as directed within 72 hours after unprotected sex, levonorgestrel can reduce the risk of pregnancy by up to 87%.
-    Taking it within 24 hours makes it even more effective.
-    However, it's essential to note that Plan B is not as effective as regular contraception and should not be used as a routine birth control method.</p>
-
-    <h3> 4. Preventeza </h3>
-    <div class="col-md-5">
-      <img src="./assets/img/preventeza.png" alt="pill">
-    </div>
-    <figcaption class="figure-caption"> The "Preventeza" pill is a proven option to help women prevent pregnancy before it starts by using the same ingredient as most birth control pills, just at a higher dose</figcaption>
-    </p> According to the press releases Preventeza can “significantly decrease” the odds you'll get pregnant after having unprotected sex, specifically noting that about seven out of every eight women who would have become pregnant WON'T after taking Preventeza. </p>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+    
+    </script>
       <footer id="colophon" role="contentinfo">
     <ul class="related-links">
       <section id="github">
@@ -301,11 +359,11 @@
       </section>
 
       <section id="instagram">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width='10vmin' height='12vmin'><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
         <li><a itemprop="url" href="https://www.instagram.com/callie_bone00/" download><i class="fa-brands fa-instagram"></i> Instagram</a></li>
       </section>
     </ul>
-    <h6>&copy; 2024 Prevention | <a href="mailto:crbone2@ualr.edu"> Report a Problem</a> | <a href="#top">Back To Top</a></h6>
+    <h6>&copy; 2025 Beauty | <a href="mailto:crbone2@ualr.edu"> Report a Problem</a> | <a href="#top">Back To Top</a></h6>
   </footer>
 
     </body>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript Calculator">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Callie Bone">
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+<form id="myform">
+    <div class="formcontainer">
+        <h1>Javascript Calculator (AJAX)</h1>
+        <fieldset id="detail">
+            <legend>Calculator (AJAX)</legend>  
+            <br>
+            
+            <label class="formlabel" for="Operand1">Operand 1: </label>
+            <input type="text" id="Operand1" name="Operand1" size="15" maxlength="15"
+                    data-rule-required="true"  data-msg-required="Operand 1 is Required" 
+                    data-rule-number="true" data-msg-number="Operand 1 must be a Number">
+            <label for="Operand1" class="error" id="Operand1Msg"></label>
+            <br><br>
+
+            <label class="formlabel">Operator: </label>
+                <label for="AddOperator">
+                    <input type="radio" name="Operator" id="AddOperator" value = "+"
+                           data-rule-required="true" data-msg-required="Operator is Required" />+
+                </label>
+                <label for="AddOperator">
+                    <input type="radio" name="Operator" id="SubtractOperator" value = "-">-
+                </label>
+                <label for="AddOperator">
+                    <input type="radio" name="Operator" id="MultiplyOperator" value = "*">*
+                </label>
+                <label for="AddOperator">
+                    <input type="radio" name="Operator" id="DivideOperator" value = "/">/
+                </label>
+            <label for="Operator" class="error" id="OperatorMsg"></label>
+            <br><br>
+      
+            <label class="formlabel" for="Operand2">Operand 2: </label>
+            <input type="text" id="Operand2" name="Operand2" size="15" maxlength="15"
+                    data-rule-required="true"  data-msg-required="Operand 2 is Required" 
+                    data-rule-number="true" data-msg-number="Operand 2 must be a Number">
+            <label for="Operand2" class="error" id="Operand2Msg"></label>
+            <br><br>
+
+            <label class="formlabel">Result: </label>
+            <span id="Result"></span>
+            <br><br>
+
+            <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
+            <input type="button" value="Clear" name="Clear" onclick="clearform();">
+
+        </fieldset>
+    </div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="./assets/js/java.js"></script>
+</body>
+</html>

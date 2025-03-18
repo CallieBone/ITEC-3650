@@ -7,18 +7,15 @@ html {
   box-sizing: inherit;
 }
 
-#colophon{
- justify-content: space-around;
+#colophon {
+  justify-content: space-around;
   display: flex;
   padding: 10px;
   color: #ff006a;
   text-align: center;
   background-color: #ffb4f3;
-}
-
-.navbar{
-color: aqua;
-
+  width: 100%;
+  position: relative; 
 }
 
 img{ 
@@ -30,41 +27,32 @@ body{
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 25px;
-  margin-right: 50px;
+  margin-right: 25px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   background-color: rgb(255, 218, 230);
 }
 
-.height-el {
-  width: 50%;
-}
-
-table {
-  border: 1px solid #3f1626;
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px, 0;
-}
-
-caption {
-  font-weight: bold;
-  margin: 10px;
-}
-
-tr:hover {
-  background-color: rgba(255, 0, 128, 0.2);
-}
-
-th {
-  background-color: #b60e40;
+.top-banner {
+  background-color: #ffb4f3;
+  color: #ff006a;
+  text-align: center;
   padding: 10px;
+  font-size: 1.2rem;
+  animation: fadeIn 2s ease-in-out;
 }
 
-td {
-  border: 1px solid #66043d;
-  padding: 5px;
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
   
   @media screen and (min-width:992px) {
     
@@ -95,6 +83,19 @@ td {
   
   }
 
+
+
+
+
+ .carouselExampleControls{
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0;
+ }
+
+
+
+ 
 }
 
 .related-links {
@@ -133,12 +134,108 @@ td {
 .related-links a{
   display:block;
   }
+  
+  .dropdown-hover:hover>.dropdown-menu {
+  display: inline-block;
+  }
+  
+  .dropdown-hover>.dropdown-toggle:active {
+  pointer-events: none;
+  }
 
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
+
+
+
+  #megamenu .nav-link {
+    color: #ff006a; 
+  }
+
+  #megamenu .nav-link:hover {
+    text-decoration: underline;
+    color: #4e1447;
+  }
+  
+  #megamenu .dropdown-menu {
+    background-color: #ffe6f2; 
+  }
+  
+  #megamenu .dropdown-menu .list-group-item {
+    color: #ff006a; 
+  }
+  
+
+
+  #candlecare .nav-link {
+    color: #ff7ab2;
+  }
+
+  #candlecare .nav-link:hover {
+    text-decoration: underline;
+    color: #4e1447;
+  }
+  
+  #candlecare .dropdown-menu {
+    background-color: #ffe6f2; 
+  }
+  
+  #candlecare .dropdown-menu .list-group-item {
+    color: #b40063; 
+  }
+  
+
+
+
+
+
+  #bodycare .nav-link {
+    color: #ff7ab2;
+  }
+
+  #bodycare .nav-link:hover {
+    text-decoration: underline;
+    color: #700b35; 
+  }
+  
+  #bodycare .dropdown-menu {
+    background-color: #ffe6f2; 
+  }
+  
+  #bodycare .dropdown-menu .list-group-item {
+    color: #b40063; 
+  }
+
+  
+
+  .btn-outline-success {
+    color: #be7298; 
+    background-color: #ffffff;
+    border-color: #ff00b3; 
+  }
+  
+  .btn-outline-success:hover {
+    color: #ff8bec; 
+    background-color: #a10b5e; 
+    border-color: #ffb9d9;
+  }
+  
   #shopping svg {
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
+    width: 50px; 
+    height: 50px; 
   }
 
   #shopping {
-    margin-left: 20px; /* Adjust the value as needed */
+    margin-left: 20px; 
+  }
+
+
+  .card-img-top {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .card-img-top:hover {
+    transform: scale(1.05); 
+    background-color: #f0f0f0; 
   }
