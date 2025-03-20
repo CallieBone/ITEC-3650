@@ -162,49 +162,45 @@ Body Care          </a>
   
   </nav>
   
-  <!-- Carousel -->
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./assets/img/cupcake1.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Cupcake Creme</h5>
-          <p>The New! Cupcake Creme Gourmon Scent is in rising popularity!</p>
-        </div>
+  <!-- Quick Quiz Section -->
+  <div class="container my-5">
+    <h2>Quick Quiz</h2>
+    <form id="quizForm" onsubmit="redirectToPage(event)">
+      <div class="mb-3">
+        <label for="question1" class="form-label">1. What is your favorite fragrance category?</label>
+        <select id="question1" class="form-select" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="../earthy/index.html">Earthy</option>
+          <option value="../flowery/index.html">Flowery</option>
+          <option value="../gourmony/index.html">Gourmony</option>
+          <option value="../oceany/index.html">Oceany</option>
+        </select>
       </div>
-      <div class="carousel-item">
-        <img src="./assets/img/cupcake2.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Featured Product 2</h5>
-          <p>Short description of the featured product.</p>
-        </div>
+      <div class="mb-3">
+        <label for="question2" class="form-label">2. How often do you shop for Body car Products?</label>
+        <select id="question2" class="form-select" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="../weekly/index.html">Weekly</option>
+          <option value="../monthly/index.html">Monthly</option>
+          <option value="../occasionally/index.html">Occasionally</option>
+          <option value="../rarely/index.html">Rarely</option>
+        </select>
       </div>
-      <div class="carousel-item">
-        <img src="./assets/img/pineapple.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Featured Product 3</5>
-          <p>Short description of the featured product.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="./assets/img/strawberry.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Featured Product 4</h5>
-          <p>Short description of the featured product.</p>
-        </div>
-      </div>
-    </div>
-    
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="quizResult" class="mt-3"></div>
   </div>
-    
+
+  <script>
+    function redirectToPage(event) {
+      event.preventDefault();
+      const question1 = document.getElementById('question1').value;
+      if (question1) {
+        window.location.href = question1;
+      }
+    }
+  </script>
+
     <br>
 
     <!-- Product Categories -->
@@ -214,7 +210,7 @@ Body Care          </a>
       <div class="row">
         <div class="col-md-3">
           <div class="card">
-            <a href="#">
+            <a href="../earthy/index.html">
             <img src="./assets/img/earth.jpg" class="card-img-top" alt="earth-perfume" >
             <div class="card-body">
               </a>
@@ -244,7 +240,7 @@ Body Care          </a>
         </div>
         <div class="col-md-3">
           <div class="card">
-            <a href="#">
+            <a href="../oceany/index.html">
             <img src="./assets/img/ocean.jpg" class="card-img-top" alt="ocean-perfume" href="#">
             <div class="card-body">
               </a>
@@ -266,7 +262,6 @@ Body Care          </a>
           <div class="row">
             <div class="col-md-3">
               <div class="card">
-                <a href="#">
                 <img src="./assets/img/detergent.png" class="card-img-top" alt="earth-perfume" href="#">
                 <div class="card-body">
                   </a>
@@ -276,7 +271,7 @@ Body Care          </a>
             </div>
             <div class="col-md-3">
               <div class="card">
-                <a href="#">
+                <a href="../aroma-diff/index.html">
                 <img src="./assets/img/aroma-diffusers.png" class="card-img-top" alt="flower-perfume" href="#">
                 <div class="card-body">
                   </a>
@@ -286,8 +281,7 @@ Body Care          </a>
             </div>
             <div class="col-md-3">
               <div class="card">
-                <a href="#">
-                <img src="./assets/img/scent-boosters.jpg" class="card-img-top" alt="food-perfume" href="#">
+                                <img src="./assets/img/scent-boosters.jpg" class="card-img-top" alt="food-perfume" href="#">
                 <div class="card-body">
                 </a>
                   <h5 class="card-title">Scent Boosters</h5>
@@ -295,9 +289,7 @@ Body Care          </a>
               </div>
             </div>
             <div class="col-md-3">
-              <div class="card">
-                <a href="#">
-                <img src="./assets/img/fabric-softener.png" class="card-img-top" alt="ocean-perfume" href="#">
+              <div class="card">                <img src="./assets/img/fabric-softener.png" class="card-img-top" alt="ocean-perfume" href="#">
                 <div class="card-body">
                   </a>
                   <h5 class="card-title">Fabric Softner</h5>
@@ -332,7 +324,6 @@ Body Care          </a>
         </div>
       </div>
     </div>
-    
     </script>
 
 
@@ -353,7 +344,7 @@ Body Care          </a>
         <li><a itemprop="url" href="https://www.instagram.com/callie_bone00/" download><i class="fa-brands fa-instagram"></i> Instagram</a></li>
       </section>
     </ul>
-    <h6>&copy; 2025 Beauty | <a href="mailto:crbone2@ualr.edu"> Report a Problem</a> | <a href="#top">Back To Top</a>| <a href="../contact me/index.html">Contact</a></h6>
+    <h6>&copy; 2025 Beauty | <a href="mailto:crbone2@ualr.edu"> Report a Problem</a> | <a href="#top">Back To Top</a> | <a href="../contact me/index.html">Contact</a> | <a href="#">All rights reserved</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></h6>
   </footer>
 
     </body>

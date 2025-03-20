@@ -17,3 +17,11 @@ let inactivityTime = function () {
 };
 
 inactivityTime();
+
+function redirectToPage(event) {
+    event.preventDefault();
+    const question1 = document.getElementById('question1').value;
+    if (question1) {
+      window.location.href = question1;
+    }
+  }
