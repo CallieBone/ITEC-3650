@@ -174,32 +174,26 @@ Body Care          </a>
           <option value="../flowery/index.html">Flowery</option>
           <option value="../gourmony/index.html">Gourmony</option>
           <option value="../oceany/index.html">Oceany</option>
+          <option value="../aroma-diff/index.html">Just here for an Aroma Diffuser</option>
         </select>
       </div>
       <div class="mb-3">
-        <label for="question2" class="form-label">2. How often do you shop for Body car Products?</label>
+        <label for="question2" class="form-label">2. How often do you shop for Body Care Products?</label>
         <select id="question2" class="form-select" required>
           <option value="" disabled selected>Select an option</option>
           <option value="../weekly/index.html">Weekly</option>
           <option value="../monthly/index.html">Monthly</option>
           <option value="../occasionally/index.html">Occasionally</option>
           <option value="../rarely/index.html">Rarely</option>
+          <option value="../rarely/index.html">Home Care</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn-btn-primary">Submit</button>
     </form>
     <div id="quizResult" class="mt-3"></div>
   </div>
 
-  <script>
-    function redirectToPage(event) {
-      event.preventDefault();
-      const question1 = document.getElementById('question1').value;
-      if (question1) {
-        window.location.href = question1;
-      }
-    }
-  </script>
+  <script src="./assets/js/script.js"></script>
 
     <br>
 

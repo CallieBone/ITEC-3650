@@ -1,65 +1,101 @@
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="JavaScript Calculator">
     <meta name="keywords" content="JavaScript, HTML, CSS">
     <meta name="author" content="Callie Bone">
-    <title>JavaScript Calculator</title>
+    <title>Bruces' Unit Conversion</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+    <script src="./assets/js/converter.js"></script>
 </head>
+
 <body>
-<form id="myform">
+<form id="myform" onsubmit="return false;">
     <div class="formcontainer">
-        <h1>Javascript Calculator (AJAX)</h1>
+        <h1>Unit Conversion Calculator (AJAX) </h1>
         <fieldset id="detail">
-            <legend>Calculator (AJAX)</legend>  
+            <legend>Conversion Calculator (AJAX)</legend>  
             <br>
             
-            <label class="formlabel" for="Operand1">Operand 1: </label>
-            <input type="text" id="Operand1" name="Operand1" size="15" maxlength="15"
-                    data-rule-required="true"  data-msg-required="Operand 1 is Required" 
-                    data-rule-number="true" data-msg-number="Operand 1 must be a Number">
-            <label for="Operand1" class="error" id="Operand1Msg"></label>
+            <label class="formlabel" for="fromvalue">From Value: </label>
+            <input type="text" id="fromvalue" name="fromvalue" size="15" maxlength="15"
+                    data-rule-required="true"  data-msg-required="From Value is Required" 
+                    data-rule-number="true" data-msg-number="From Value Must be A number">
+            <label for="fromvalue" class="error" id="fromvaluemessage"></label>
             <br><br>
 
-            <label class="formlabel">Operator: </label>
-                <label for="AddOperator">
-                    <input type="radio" name="Operator" id="AddOperator" value = "+"
-                           data-rule-required="true" data-msg-required="Operator is Required" />+
+            <label class="formlabel">From Unit: </label>
+                <label for="fromcentimeters">
+                    <input type="radio" name="fromunit" id="fromcentimeters" value = "cm" data-rule-required="true" data-msg-required="From Unit is Required" > centimenters
                 </label>
-                <label for="AddOperator">
-                    <input type="radio" name="Operator" id="SubtractOperator" value = "-">-
+                <label for="frommeters">
+                    <input type="radio" name="fromunit" id="frommeters" value = "m">Meters 
                 </label>
-                <label for="AddOperator">
-                    <input type="radio" name="Operator" id="MultiplyOperator" value = "*">*
+                <label for="fromkilometers">
+                    <input type="radio" name="fromunit" id="fromkilometers" value = "km">kilometers
                 </label>
-                <label for="AddOperator">
-                    <input type="radio" name="Operator" id="DivideOperator" value = "/">/
+                <label for="frominches">
+                    <input type="radio" name="fromunit" id="frominches" value = "in">inches
                 </label>
-            <label for="Operator" class="error" id="OperatorMsg"></label>
-            <br><br>
+                <label for="fromfeet">
+                    <input type="radio" name="fromunit" id="fromfeet" value = "ft">feet
+                </label>
+                <label for="fromyards">
+                    <input type="radio" name="fromunit" id="fromyards" value = "yd">yards
+                </label>
+                <label for="frommiles">
+                    <input type="radio" name="fromunit" id="frommiles" value = "mi" >miles
+                </label>
+                <label for="fromunit" class="error" id="fromuniterror"></label>
+                <br><br>
+
+                <label class="formlabel">To Unit: </label>
+                <label for="tocentimenters">
+                    <input type="radio" name="tounit" id="tocentimenters" value = "cm" data-rule-required="true" data-msg-required="To Unit is Required"> centimenters
+                </label>
+                <label for="tometers">
+                    <input type="radio" name="tounit" id="tometers" value = "m">Meters
+                </label>
+                <label for="tokilometers">
+                    <input type="radio" name="tounit" id="tokilometers" value = "km">kilometers
+                </label>
+                <label for="toinches">
+                    <input type="radio" name="tounit" id="toinches" value = "in">inches
+                </label>
+                <label for="tofeet">
+                    <input type="radio" name="tounit" id="tofeet" value = "ft">feet
+                </label>
+                <label for="toyards">
+                    <input type="radio" name="tounit" id="toyards" value = "yd">yards
+                </label>
+                <label for="tomiles">
+                    <input type="radio" name="tounit" id="tomiles" value = "mi">miles
+                </label>
+                <label for="tounit" class="error" id="touniterror"></label>
+            <br>
+            
+            <br>
       
-            <label class="formlabel" for="Operand2">Operand 2: </label>
-            <input type="text" id="Operand2" name="Operand2" size="15" maxlength="15"
-                    data-rule-required="true"  data-msg-required="Operand 2 is Required" 
-                    data-rule-number="true" data-msg-number="Operand 2 must be a Number">
-            <label for="Operand2" class="error" id="Operand2Msg"></label>
-            <br><br>
 
-            <label class="formlabel">Result: </label>
-            <span id="Result"></span>
+            <label class="formlabel">To Value:</label>
+            <span id="tovalue"></span>
             <br><br>
 
             <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
-            <input type="button" value="Clear" name="Clear" onclick="clearform();">
+            <input type="button" value="Clear" name="Clear" onclick="clearform();"  >
 
         </fieldset>
+
     </div>
+
 </form>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-<script src="./assets/js/"></script>
+
 </body>
+
 </html>

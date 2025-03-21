@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript Calculator">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Callie Bone">
+    <title>Currency Conversion</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="./assets/js/chart.js"></script>
+</head>
+    <body>
+        <main>
+        <form id="myform" onsubmit="return false;">
+            <div class="formcontainer">
+                <h1>Currency Value History</h1>
+                <label for="basecurrency" class="formlabel">Base Currency: </label>
+                <select id="basecurrency" name="basecurrency" data-rule-required="true" data-msg-required="Base Currency is Required" required>
+                    <option value="">Select An Option</option>
+                    <option value="KRW">Korean Won</option>
+                    <option value="JOD">Jordanian Dinar</option>
+                    <option value="JPY">Japanese Yen</option>
+                    <option value="MAD">Moroccan Dirham</option>
+                    <option value="SGD">Singapore Dollar</option>
+                    <option value="USD">United States Dollar</option>
+                    <option value="QAR">Qatari Rial</option>
+                </select>
+                <br>
+                 <label for="convertcurrency" class="formlabel"> Convert Currency: </label>
+                 <select id="convertcurrency" name="convertcurrency"  data-rule-required="true" data-msg-required="Convert Currency is Required">
+                        <option value="">Select An Option</option>
+                        <option value="KRW">Korean Won</option>
+                        <option value="JOD">Jordanian Dinar</option>
+                        <option value="JPY">Japanese Yen</option>
+                        <option value="MAD">Moroccan Dirham</option>
+                        <option value="SGD">Singapore Dollar</option>
+                        <option value="USD">United States Dollar</option>
+                        <option value="QAR">Qatari Rial</option>
+                </select>
+                <br>
+            <label for="fromdate" class="formlabel">From Date:</label>
+            <input type="date" id="fromdate" name="fromdate" required>
+            <br>
+            <label for="todate" class="formlabel">To Date: </label>
+            <input type="date" id="todate" name="todate" required>
+            <br><br>
+
+            <input type="button" value="Results" id="display">
+            <input type="button" value="Clear" id="clear" name="clear" onclick="ClearForm();">
+            <hr>
+         </div>
+     </form>
+        <div id="chart-container">
+            <canvas id="chartjs-0"></canvas>
+        </div>
+    </main>
+    </body>

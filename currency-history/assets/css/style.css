@@ -1,0 +1,26 @@
+.formcontainer {
+    width: 1000px;
+    padding: 5px;
+    text-decoration:dotted;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+  }
+  
+  .formlabel {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    padding: 5px;
+  }
+  
+  .error {
+    color: red;
+    padding-left: 5px;
+  }
+  
+  
+    .formcontainer input[type="text"] {
+        width: 200px;
+        padding: 5px;
+    }  

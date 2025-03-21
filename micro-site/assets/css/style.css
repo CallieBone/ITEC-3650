@@ -219,6 +219,12 @@ body{
     margin-left: 20px; 
   }
 
+  .btn-btn-primary {
+    color: #ff006a; 
+    background-color: #ffb4f3; 
+    border-color: #ff006a; 
+  }
+
 
   .card-img-top {
     transition: transform 0.3s ease, background-color 0.3s ease;
