@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>River Data AJAX Example</title>
-    <!-- Link to the JavaScript file -->
     <script src="./js/url.js" defer></script>
 </head>
 <body>
@@ -12,31 +11,21 @@
     <p>Check the console or alert messages for river data!</p>
 </body>
 </html>
-    <script>
-        // JavaScript code to fetch river data using AJAX
-        function fetchRiverData() {
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://api.example.com/river-data', true); // Replace with your API URL
-
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    const data = JSON.parse(xhr.responseText);
-                    console.log(data); // Log the data to the console
-                    alert('River data fetched successfully! Check the console for details.');
-                } else {
-                    console.error('Error fetching river data:', xhr.statusText);
-                    alert('Failed to fetch river data. Please try again later.');
+<script>
+        // Example AJAX call using Fetch API
+        async function fetchRiverData() {
+            const url = 'https://example.com/api/riverdata'; // Replace with your generated URL
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
-            };
-
-            xhr.onerror = function() {
-                console.error('Network error occurred while fetching river data.');
-                alert('Network error. Please check your connection and try again.');
-            };
-
-            xhr.send();
+                const data = await response.json();
+                console.log(data); // Handle the data as needed
+            } catch (error) {
+                console.error('There has been a problem with your fetch operation:', error);
+            }
         }
 
-        // Call the function to fetch river data
-        fetchRiverData();
+        document.addEventListener('DOMContentLoaded', fetchRiverData);
     </script>
