@@ -11,21 +11,3 @@
     <p>Check the console or alert messages for river data!</p>
 </body>
 </html>
-<script>
-        // Example AJAX call using Fetch API
-        async function fetchRiverData() {
-            const url = 'https://example.com/api/riverdata'; // Replace with your generated URL
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                console.log(data); // Handle the data as needed
-            } catch (error) {
-                console.error('There has been a problem with your fetch operation:', error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', fetchRiverData);
-    </script>
