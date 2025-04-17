@@ -44,7 +44,7 @@ async function fetchWeather() {
           <div class="card">
             <div class="card-body text-center">
               <h5 class="card-title">${formattedDate}</h5>
-              <p class="card-text">${icon}</p>
+              <img src="https://via.placeholder.com/50?text=${encodeURIComponent(icon)}" alt="${icon}" class="mb-2">
               <p class="card-text">Max Temp: ${dailyForecasts.temperature_2m_max[i]}°C</p>
               <p class="card-text">Min Temp: ${dailyForecasts.temperature_2m_min[i]}°C</p>
             </div>
@@ -53,9 +53,9 @@ async function fetchWeather() {
     }
     forecastHTML += '</div>';
 
-    document.getElementById('weather-info').innerHTML = forecastHTML;
+    document.getElementById('forecast-container').innerHTML = forecastHTML; // Ensure the container ID matches the HTML
   } catch (error) {
-    document.getElementById('weather-info').textContent = 'Unable to fetch weather data.';
+    document.getElementById('forecast-container').textContent = 'Unable to fetch weather data.';
   }
 }
 fetchWeather();
