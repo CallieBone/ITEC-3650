@@ -14,6 +14,7 @@ function fetchRiverGaugeData() {
             // This is where you can handle the data returned from the API
             console.log("River Gauge Data:", data);
             alert("River Gauge Data Retrieved! Check the console for details.");
+            processRiverData(data);
         })
         .catch(error => {
             // This handle any errors that may occur during the fetch
@@ -24,3 +25,67 @@ function fetchRiverGaugeData() {
 }
 
 fetchRiverGaugeData();
+
+/* Assuming msg is the response from the AJAX call */
+function processRiverData(msg) {
+    /* Site 1: Boxley (07055646) */
+    var dates = [];
+    var values = [];
+    var fLen = msg.value.timeSeries[0].values[0].value.length;
+    for (let i = 0; i < fLen; i++) {
+        values[i] = msg.value.timeSeries[0].values[0].value[i].value;
+        dates[i] = msg.value.timeSeries[0].values[0].value[i].dateTime;
+    }
+    var sitename = msg.value.timeSeries[0].sourceInfo.siteName;
+    var sitecode = msg.value.timeSeries[0].sourceInfo.siteCode[0].value;
+    var siteDescription = msg.value.timeSeries[0].variable.variableDescription;
+
+    displayGraph(dates, values, sitename);
+
+    /* Site 2 */
+    dates = [];
+    values = [];
+    fLen = msg.value.timeSeries[1].values[0].value.length;
+    for (let i = 0; i < fLen; i++) {
+        values[i] = msg.value.timeSeries[1].values[0].value[i].value;
+        dates[i] = msg.value.timeSeries[1].values[0].value[i].dateTime;
+    }
+    sitename = msg.value.timeSeries[1].sourceInfo.siteName;
+    sitecode = msg.value.timeSeries[1].sourceInfo.siteCode[0].value;
+    siteDescription = msg.value.timeSeries[1].variable.variableDescription;
+
+    displayGraph(dates, values, sitename);
+
+    /* Continue for Sites 3 and 4 if needed */
+}
+
+function displayGraph(dates, values, sitename) {
+    var ctx = document.getElementById('chartjs-0').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: [{
+                label: sitename,
+                data: values,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    type: 'time',
+                    time: {
+                        unit: 'day'
+                    }
+                },
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}

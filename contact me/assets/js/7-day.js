@@ -9,7 +9,6 @@ async function generate7DayForecast() {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const dailyForecast = {};
 
-    // Group forecasts by day
     data.list.forEach(item => {
         const date = new Date(item.dt * 1000);
         const day = date.toISOString().split('T')[0]; 
@@ -18,7 +17,6 @@ async function generate7DayForecast() {
         }
     });
 
-    // Ensure 7 consecutive days
     const today = new Date();
     const forecast = [];
     for (let i = 0; i < 7; i++) {

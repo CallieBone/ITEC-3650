@@ -5,9 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>River Data AJAX Example</title>
     <script src="./js/url.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <h1>River Data Viewer</h1>
     <p>Check the console or alert messages for river data!</p>
+    <canvas id="chartjs-0" width="400" height="400"></canvas>
+    <script>
+        const ctx = document.getElementById('chartjs-0').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar', 
+            data: {
+                labels: ['Boxley (07055646)', 'Ponca (07055660)', 'Pruitt (07055680)', 'Caruer (07055780)'], // Updated labels
+                datasets: [{
+                    label: 'River Codes',
+                    data: [7055646, 7055660, 7055680, 7055780], 
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
